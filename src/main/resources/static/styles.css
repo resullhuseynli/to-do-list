@@ -1,0 +1,123 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background color and center content */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title styling */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;  /* Limited form width */
+}
+
+/* Form label styling */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input fields and button styling */
+form input, form select, form button {
+    padding: 8px;  /* Reduced padding for smaller rows */
+    font-size: 14px;  /* Reduced font size for smaller input fields */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 80%;  /* Limit table width */
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto; /* Center the table */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 5px 10px;  /* Further reduce padding for smaller rows */
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;  /* Reduce font size for a more compact appearance */
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+table td {
+    background-color: #fff;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Styling for action buttons inside the table */
+td form {
+    display: flex;
+    align-items: center;  /* Align items vertically in the center */
+    gap: 10px;  /* Space between the select dropdown and the update button */
+}
+
+td form button {
+    background-color: #f44336;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+td form button:hover {
+    background-color: #007b8e;
+}
+
+/* Select dropdown inside the table */
+td select {
+    font-size: 14px;
+    padding: 6px;
+}
+
+/* Button for the update form inside table */
+td form button {
+    background-color: #008CBA;
+}
+
+td form button:hover {
+    background-color: #007b8e;
+}

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>To-Do-List</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-<h1 style="text-align: center">To Do List</h1>
+<h1>To Do List</h1>
 
-<form style="text-align: center" method="post" hx-post="/tasks" hx-target="#taskList">
+<form method="post" hx-post="/tasks" hx-target="#taskList">
     <label>
         <input type="text" name="description" placeholder="New task" required>
     </label>
@@ -24,7 +25,7 @@
     <button type="submit">Add</button>
 </form>
 
-<table style="margin: auto" border="1">
+<table>
     <thead>
     <tr>
         <th>Task</th>
@@ -40,15 +41,17 @@
         <td th:text="${#dates.format(task.deadline, 'yyyy-MM-dd')}"></td>
         <td th:text="${task.status}"></td>
         <td>
-            <form th:action="@{/tasks/update-status/{id}(id=${task.id})}" method="post" hx-post="/tasks" hx-target="#taskList">
+            <form th:action="@{/tasks/update-status/{id}(id=${task.id})}" method="post" hx-post="/tasks" hx-target="#taskList" style="display: flex; align-items: center; gap: 10px;">
                 <label>
-                    <select name="status">
+                    <select name="status" style="font-size: 14px;">
                         <option value="WAITING" th:selected="${task.status == 'WAITING'}">Waiting</option>
                         <option value="IN_PROGRESS" th:selected="${task.status == 'IN_PROGRESS'}">In Progress</option>
                         <option value="DONE" th:selected="${task.status == 'DONE'}">Done</option>
                     </select>
                 </label>
-                <button type="submit">Update</button>
+                <button type="submit" style="background-color: #008CBA; padding: 5px 10px; color: white; border: none; border-radius: 5px;">
+                    Update
+                </button>
             </form>
         </td>
         <td>
